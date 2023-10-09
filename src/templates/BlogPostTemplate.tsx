@@ -31,7 +31,7 @@ const BlogPostTemplate = ({
 
   return (
     <PostLayout title={siteTitle}>
-      <Seo title={title} description={description} />
+      <Seo title={`고윤영 블로그 | ${title}`} description={description} />
       <StyledPostHeader>
         <StyledTitle>{title}</StyledTitle>
         <StyledDate>{date}</StyledDate>

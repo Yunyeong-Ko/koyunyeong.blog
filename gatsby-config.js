@@ -1,17 +1,18 @@
 const SITE_METADATA = Object.freeze({
-  title: "Title",
+  title: "고윤영 블로그",
   author: {
-    name: "Name",
-    position: "Position",
-    summary: "Summary",
+    name: "고윤영",
+    position: "Backend Devloper",
+    summary: "안녕하세요. 백엔드 개발자 고윤영입니다.",
   },
-  description: "description",
-  siteUrl: "https://github.com/seokkamoni",
+  description:
+    "개발, 일상, 생각 등에 대한 제 모든 것을 정리하고 기록하는 블로그입니다.",
+  siteUrl: "https://github.com/Yunyeong-Ko",
   social: {
-    phoneNumber: "010-1234-5678",
-    gmail: "gmail",
-    github: "github-id",
-    instagram: "instagram-id",
+    phoneNumber: "010-7421-4647",
+    gmail: "koyunyeong0.6",
+    github: "Yunyeong-Ko",
+    instagram: "_yun0_6",
   },
 });
 
@@ -85,7 +86,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
+              return allMarkdownRemark.nodes.map((node) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
